@@ -1,13 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import { Routes, Route} from 'react-router-dom';
+import './LoginPage/LoginPage.jsx'
+import LoginPage from './LoginPage/LoginPage.jsx';
+import LandingPage from './LandingPage/LandingPage.jsx';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <h1>Auth0 Practice</h1>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/landingPage' element={<LandingPage />} />
+      <Route index element={<LoginPage />} />
+    </Routes>
+  
   );
 }
 
